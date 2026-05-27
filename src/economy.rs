@@ -1,5 +1,6 @@
 use core::num::Saturating;
 use std::mem;
+use crate::station::StationId;
 
 pub type Money = Saturating<u64>;
 
@@ -88,8 +89,10 @@ pub struct ScoreInfo {
  * Enumeration of all base prices for use with #Prices.
  * The prices are ordered as they are expected by NewGRF cost multipliers, so don't shuffle them.
  */
+#[derive(Default, Debug)]
 #[repr(u8)]
 pub enum Price {
+	#[default]
     StationValue = 0,
     BuildRail,
     BuildRoad,
@@ -260,6 +263,17 @@ pub const ROAD_DEPOT_TRACKBIT_FACTOR: u32 = 2;
 pub const ROAD_STOP_TRACKBIT_FACTOR: u32 = 2;
 /** Multiplier for how many regular tiles a lock counts. */
 pub const LOCK_DEPOT_TILE_FACTOR: u32 = 2;
+
+pub struct CargoPayment {
+	/// The current station
+	pub station: StationId,
+	///< The amount of money to add/remove from the bank account
+	pub route_profit: Money,
+	///< The visual profit to show
+	pub visual_profit: Money,
+	///< The transfer credits to be shown
+	pub visual_transfer: Money,
+}
 
 pub struct CargoPaymentID(pub u32);
 

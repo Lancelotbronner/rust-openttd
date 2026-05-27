@@ -1,0 +1,1 @@
+pub type StationId = u32;
