@@ -13,21 +13,21 @@ use enum_bitset::EnumBitset;
 #[bitset(name = Directions)]
 pub enum Direction {
     /// North
-    DIR_N = 0,
+    N ,
     /// Northeast
-    DIR_NE = 1,
+    NE ,
     /// East
-    DIR_E = 2,
+    E ,
     /// Southeast
-    DIR_SE = 3,
+    SE ,
     /// South
-    DIR_S = 4,
+    S ,
     /// Southwest
-    DIR_SW = 5,
+    SW ,
     /// West
-    DIR_W = 6,
+    W ,
     /// Northwest
-    DIR_NW = 7,
+    NW ,
 }
 // DECLARE_INCREMENT_DECREMENT_OPERATORS(Direction)
 
@@ -50,17 +50,17 @@ pub enum Direction {
  */
 pub enum DirDiff {
     /// Both directions faces to the same direction
-    DIRDIFF_SAME = 0,
+    Same = 0,
     /// Angle of 45 degrees right
-    DIRDIFF_45RIGHT = 1,
+    Right45 = 1,
     /// Angle of 90 degrees right
-    DIRDIFF_90RIGHT = 2,
+    Right90 = 2,
     /// One direction is the opposite of the other one
-    DIRDIFF_REVERSE = 4,
+    Reverse = 4,
     /// Angle of 90 degrees left
-    DIRDIFF_90LEFT = 6,
+    Left90 = 6,
     /// Angle of 45 degrees left
-    DIRDIFF_45LEFT = 7,
+    Left45 = 7,
 }
 
 /**
@@ -72,13 +72,13 @@ pub enum DirDiff {
 #[bitset(name = DiagDirections)]
 pub enum DiagDirection {
     /// Northeast, upper right on your monitor
-    DIAGDIR_NE = 0,
+    NE,
     /// Southeast
-    DIAGDIR_SE = 1,
+    SE,
     /// Southwest
-    DIAGDIR_SW = 2,
+    SW,
     /// Northwest
-    DIAGDIR_NW = 3,
+    NW,
 }
 // DECLARE_INCREMENT_DECREMENT_OPERATORS(DiagDirection)
 // DECLARE_ENUM_AS_ADDABLE(DiagDirection)
@@ -95,13 +95,13 @@ pub enum DiagDirection {
  */
 pub enum DiagDirDiff {
     /// Same directions
-    DIAGDIRDIFF_SAME = 0,
+    Same = 0,
     /// 90 degrees right
-    DIAGDIRDIFF_90RIGHT = 1,
+    Right = 1,
     /// Reverse directions
-    DIAGDIRDIFF_REVERSE = 2,
+    Reverse = 2,
     /// 90 degrees left
-    DIAGDIRDIFF_90LEFT = 3,
+    Left = 3,
 }
 // DECLARE_INCREMENT_DECREMENT_OPERATORS(DiagDirDiff)
 
@@ -115,8 +115,10 @@ pub enum DiagDirDiff {
  */
 pub enum Axis {
     /// The X axis
-    AXIS_X = 0,
+    X = 0,
     /// The y axis
-    AXIS_Y = 1,
+    Y = 1,
+	///< Flag for an invalid Axis
+	Invalid = 0xFF,
 }
 // DECLARE_ENUM_AS_ADDABLE(Axis)

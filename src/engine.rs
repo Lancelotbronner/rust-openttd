@@ -6,10 +6,9 @@ use crate::rail::RailTypes;
 use crate::road::RoadTypes;
 use crate::sound::SoundId;
 use crate::strings::StringId;
-use crate::timer_game_calendar::Calendar;
-use crate::timer_game_common::Year;
 use enum_bitset::EnumBitset;
 use crate::physics::Acceleration;
+use crate::timer::{Calendar, Year};
 
 /** Unique identification number of an engine. */
 pub type EngineId = u16;

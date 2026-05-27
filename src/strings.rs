@@ -32,20 +32,18 @@ pub enum TextDirection {
 /** StringTabs to group StringIDs */
 pub enum StringTab {
     /* Tabs 0..1 for regular strings */
-    TEXT_TAB_TOWN = 4,
-    TEXT_TAB_INDUSTRY = 9,
-    TEXT_TAB_STATION = 12,
-    TEXT_TAB_SPECIAL = 14,
-    TEXT_TAB_OLD_CUSTOM = 15,
-    TEXT_TAB_VEHICLE = 16,
+    TOWN = 4,
+    INDUSTRY = 9,
+    STATION = 12,
+    SPECIAL = 14,
+    OLD_CUSTOM = 15,
+    VEHICLE = 16,
     /* Tab 17 for regular strings */
-    TEXT_TAB_OLD_NEWGRF = 26,
-    /// End of language files.
-    TEXT_TAB_END = 32,
+    OLD_NEWGRF = 26,
     /// Start of GameScript supplied strings.
-    TEXT_TAB_GAMESCRIPT_START = 32,
+    GAMESCRIPT_START = 32,
     /// Start of NewGRF supplied strings.
-    TEXT_TAB_NEWGRF_START = 64,
+    NEWGRF_START = 64,
 }
 
 /** The index/offset of a string within a #StringTab. */

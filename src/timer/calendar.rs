@@ -4,7 +4,7 @@
  * OpenTTD is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  * See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with OpenTTD. If not, see <https://www.gnu.org/licenses/old-licenses/gpl-2.0>.
  */
-use crate::timer_game_common::{Date, DateFrac, Day, Month, Year, YearMonthDay};
+use crate::timer::{Date, DateFrac, Day, Month, Year, YearMonthDay};
 
 /** @file timer_game_calendar.h Definition of the game-calendar-timer. */
 
